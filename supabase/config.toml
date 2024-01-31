@@ -1,6 +1,6 @@
 # A string used to distinguish different Supabase projects on the same host. Defaults to the
 # working directory name when running `supabase init`.
-project_id = "wts_training"
+project_id = "mts_training"
 
 [api]
 enabled = true

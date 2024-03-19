@@ -1,8 +1,13 @@
+import { useNavigate } from 'react-router-dom';
 import { logout } from '../DB/supabase';
 
-const LogOut = () => {
+const LogOutButton = () => {
+  const navigate = useNavigate();
   const handleLogout = () => {
-    logout();
+    try {
+      logout();
+      navigate('/');
+    } catch {}
   };
   return (
     <button
@@ -14,4 +19,4 @@ const LogOut = () => {
   );
 };
 
-export default LogOut;
+export default LogOutButton;

@@ -39,6 +39,19 @@ export async function logout() {
   await supabase.auth.signOut();
 }
 
+export async function updatePassword(newPass: string) {
+  try {
+    const { data, error } = await supabase.auth.updateUser({
+      password: newPass,
+    });
+    if (error) throw error;
+    return data;
+  } catch (error) {
+    console.error('Password change error:', error);
+    throw error;
+  }
+}
+
 export async function isUserAdmin(user_id: string) {
   // Using Supabase client to query the 'user_roles' table
   const { data, error } = await supabase

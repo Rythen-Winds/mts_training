@@ -1,5 +1,5 @@
 import { useAuth } from '../DB/AuthProvider';
-import LogOut from '../components/LogOut.tsx';
+import LogOut from '../components/LogOutButton.tsx';
 import Login from '../components/Login';
 
 const HomePage = () => {

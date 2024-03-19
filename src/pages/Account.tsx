@@ -1,13 +1,14 @@
-import { useNavigate } from 'react-router-dom';
-import { logout } from '../DB/supabase';
+import { Link } from 'react-router-dom';
+import LogOut from '../components/LogOutButton';
 
 const Account = () => {
-  const navigate = useNavigate();
-  const handleSignOut = () => {
-    logout();
-    navigate('/');
-  };
-  return <button onClick={handleSignOut}>Sign Out</button>;
+
+  return (
+    <>
+      <Link to='/account/changePassword'>Change Password</Link>
+      <LogOut />
+    </>
+  );
 };
 
 export default Account;
